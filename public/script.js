@@ -96,22 +96,24 @@ gsap.from(".bottomright", {
 
 
 
-const stackTl = gsap.timeline({
-  scrollTrigger:{
-    trigger:".timeline-section",
-    start:"top top",
-    end:"+=3000",
-    pin:true,
-    scrub:4
-  }
-});
+if (window.matchMedia("(min-width: 901px)").matches) {
+  const stackTl = gsap.timeline({
+    scrollTrigger:{
+      trigger:".timeline-section",
+      start:"top top",
+      end:"+=3000",
+      pin:true,
+      scrub:4
+    }
+  });
 
-stackTl
-.to(".card2",{ y:0,duration:1 })
-.to(".card3",{ y:0,duration:1  })
-.to(".card4",{ y:0,duration:1  })
-.to(".card5",{ y:0,duration:1  })
-.to(".card6",{ y:0,duration:1  });
+  stackTl
+  .to(".card2",{ y:0,duration:1 })
+  .to(".card3",{ y:0,duration:1  })
+  .to(".card4",{ y:0,duration:1  })
+  .to(".card5",{ y:0,duration:1  })
+  .to(".card6",{ y:0,duration:1  });
+}
 
 // gsap.registerPlugin(ScrollTrigger);
 
