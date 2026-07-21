@@ -6,6 +6,7 @@
     "start": "node app.js"
   },
   "dependencies": {
+    "@vercel/analytics": "^2.0.1",
     "ejs": "^3.1.10",
     "express": "^5.2.1"
   }
